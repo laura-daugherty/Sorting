@@ -5,19 +5,16 @@ def selection_sort( arr ):
         cur_index = i
         smallest_index = cur_index
         for s in range(cur_index, len(arr)):
-            smallArr = arr[smallest_index]
-            currArr = arr[cur_index]
-            sArr = arr[s]
-            if sArr < smallArr:
-                smallest_index = s
-        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
+            print(arr[s], arr[smallest_index])
+            if arr[s] < arr[smallest_index]:
+                arr[smallest_index], arr[s] = arr[s], arr[smallest_index]
     return arr
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
              
-# arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
-# sorted = selection_sort(arr1)
-# print(sorted)
+arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+sorted = selection_sort(arr1)
+print(sorted)
 
         # TO-DO: swap
 
